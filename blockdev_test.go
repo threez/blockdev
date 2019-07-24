@@ -1,18 +1,19 @@
-package blockdev
+package blockdev_test
 
 import (
 	"context"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	"github.com/threez/blockdev"
 )
 
 func TestFakeList(t *testing.T) {
 	assert := assert.New(t)
 
 	// configure to use the test executable (for persitant output)
-	Lsblk = "./test/lsblk-fake"
-	devices, err := List(context.Background())
+	blockdev.Lsblk = "./test/lsblk-fake"
+	devices, err := blockdev.List(context.Background())
 	if err != nil {
 		panic(err)
 	}

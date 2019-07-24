@@ -1,6 +1,6 @@
 # blockdev
 
-List linux block devices
+List linux block devices in Go.
 
 ## Usage
 
@@ -8,6 +8,7 @@ List linux block devices
     
     import (
         "fmt"
+	    "context"
         "github.com/threez/blockdev"
     )
 
@@ -15,7 +16,7 @@ List linux block devices
         devices, err := blockdev.List(context.Background())
         if err != nil {
             panic(err)
-        }  
+        }
 
         fmt.Println("Devices", devices)
     }

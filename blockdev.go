@@ -65,7 +65,7 @@ type BlockDevice struct {
 	Serial string `json:"serial"`
 
 	// Size size of the device
-	Size int `json:"size,string"`
+	Size int64 `json:"size,string"`
 
 	// State state of the device
 	State *string `json:"state"`
