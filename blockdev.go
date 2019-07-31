@@ -145,7 +145,7 @@ type BlockDevice struct {
 	// Vendor device vendor
 	Vendor *string `json:"vendor"`
 
-	Children []BlockDevice `json:"children"`
+	Children []*BlockDevice `json:"children"`
 }
 
 func (d BlockDevice) String() string {
